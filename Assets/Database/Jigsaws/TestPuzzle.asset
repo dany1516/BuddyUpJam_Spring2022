@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 770e0f9c4ae4fe247942836414ccfed1, type: 3}
+  m_Name: TestPuzzle
+  m_EditorClassIdentifier: 
+  jigsawPiece:
+  - pieceSprite: {fileID: 21300000, guid: ea47b079b5a1fc04283375888d8aed58, type: 3}
+    piecePosition: {x: 0, y: 0, z: 0}
+  - pieceSprite: {fileID: 21300000, guid: 9c09432ba89d6954f87646892194b7aa, type: 3}
+    piecePosition: {x: 8.24, y: -0.78, z: 0}
+  - pieceSprite: {fileID: 21300000, guid: a2c377c8ec37cc246bf49c9b9a83f812, type: 3}
+    piecePosition: {x: 17.3, y: -0.5, z: 0}
+  - pieceSprite: {fileID: 21300000, guid: e03bff3acad4bb54faab21c72185e52a, type: 3}
+    piecePosition: {x: 27.1, y: 1, z: 0}
+  - pieceSprite: {fileID: 21300000, guid: 2eea3b43f3cec0e4b90f7d6cf340e9ed, type: 3}
+    piecePosition: {x: -1.49, y: -5.9, z: 0}
+  - pieceSprite: {fileID: 21300000, guid: dbd63c6193dcc5e42b2fd58f9c976820, type: 3}
+    piecePosition: {x: 8.1, y: -5.3, z: 0}
+  - pieceSprite: {fileID: 21300000, guid: b5fa763123c4d3241952de18e50c365e, type: 3}
+    piecePosition: {x: 18.8, y: -6.3, z: 0}
+  - pieceSprite: {fileID: 21300000, guid: b5f8ce0db7b119b47bbcb5d60b3547d1, type: 3}
+    piecePosition: {x: 27.5, y: -4.2, z: 0}
+  - pieceSprite: {fileID: 21300000, guid: 5c756a50fd8c32b4bac0c5bb203cb0d8, type: 3}
+    piecePosition: {x: -1.5, y: -11.8, z: 0}
+  - pieceSprite: {fileID: 21300000, guid: a508d19d51aff294787fe7b48353bda0, type: 3}
+    piecePosition: {x: 8.1, y: -11.1, z: 0}
+  - pieceSprite: {fileID: 21300000, guid: 5cf650f253d12824fa207712749b3cb0, type: 3}
+    piecePosition: {x: 18.3, y: -11.8, z: 0}
+  - pieceSprite: {fileID: 21300000, guid: acc1be034feb5ca4b8925044605cd940, type: 3}
+    piecePosition: {x: 26.9, y: -10.7, z: 0}
