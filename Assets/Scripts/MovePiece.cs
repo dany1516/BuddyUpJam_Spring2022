@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class MovePiece : MonoBehaviour
 {
-    private Vector3 mOffset;
-    private float mZCoord;
+    Vector3 mOffset;
+    float mZCoord;
 
     void OnMouseDown()
     {
@@ -24,6 +24,5 @@ public class MovePiece : MonoBehaviour
     void OnMouseDrag()
     {
         transform.position = GetMouseAsWorldPoint() + mOffset;
-        Debug.Log("Game Object position is: " + gameObject.transform.position + " and mouse point is at: " + GetMouseAsWorldPoint());
     }
 }

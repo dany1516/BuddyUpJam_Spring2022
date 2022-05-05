@@ -28,33 +28,23 @@ public class CreateJigsaw : MonoBehaviour
         ChangeValues();
     }
 
-    private void ClearJigsaw()
+    void ClearJigsaw()
     {
         jigsawNewPiece.Clear();
     }
 
-    private void ChangeValues()
+    void ChangeValues()
     {
-        var piecePosition = new Vector3(0, 0, 0);
-
-        for(int i = 0; i < jigsawPuzzle.GetPuzzleRows(); i++) 
+        for(int i = 0; i < jigsawNewPiece.Count; i++) 
         {
-            for(int j = 0; j < jigsawPuzzle.GetPuzzleColumns(); j++) 
-            {
-                var currentPiece = jigsawPuzzle.GetPuzzleRows() * i + j;
-
-                jigsawNewPiece[currentPiece].tag = pieceTag.ToString();
-                jigsawNewPiece[currentPiece].transform.parent = this.gameObject.transform;
-                jigsawNewPiece[currentPiece].transform.position = this.gameObject.transform.position + 
-                    new Vector3(Random.Range(minX,maxX), Random.Range(minY,maxY),0);
-                piecePosition.x += jigsawPuzzle.GetJigsawPiecesSize();   
-            }
-            piecePosition.x = 0;   
-            piecePosition.y -= jigsawPuzzle.GetJigsawPiecesSize();
+            jigsawNewPiece[i].tag = pieceTag.ToString();
+            jigsawNewPiece[i].transform.parent = this.gameObject.transform;
+            jigsawNewPiece[i].transform.position = this.gameObject.transform.position + 
+                 new Vector3(Random.Range(minX,maxX), Random.Range(minY,maxY),0); 
         }    
     }
 
-    private void CreatePieces()
+    void CreatePieces()
     {
         for(int i = 0; i < jigsawPuzzle.GetJigsawPieces().Count; i++)
         {
@@ -64,8 +54,6 @@ public class CreateJigsaw : MonoBehaviour
             newPiece.AddComponent<SpriteRenderer>().sprite = jigsawPuzzle.GetJigsawPieces()[i];
             newPiece.AddComponent<BoxCollider2D>();
             newPiece.AddComponent<MovePiece>();
-
-            Debug.Log(newPiece.name);
         } 
     }
 
