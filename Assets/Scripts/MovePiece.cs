@@ -5,24 +5,29 @@ using UnityEngine;
 public class MovePiece : MonoBehaviour
 {
     Vector3 mOffset;
-    float mZCoord;
+    float zCoord;
 
     void OnMouseDown()
     {
 
-        mZCoord = Camera.main.WorldToScreenPoint(gameObject.transform.position).z;
+        zCoord = Camera.main.WorldToScreenPoint(gameObject.transform.position).z;
         mOffset = gameObject.transform.position - GetMouseAsWorldPoint();
     }
 
     private Vector3 GetMouseAsWorldPoint()
     {
         Vector3 mousePoint = Input.mousePosition;
-        mousePoint.z = mZCoord;
+        mousePoint.z = zCoord;
         return Camera.main.ScreenToWorldPoint(mousePoint);
     }
 
     void OnMouseDrag()
     {
         transform.position = GetMouseAsWorldPoint() + mOffset;
+    }
+
+    void OnMouseUp() 
+    {
+        FindObjectOfType<JigsawLogic>().SnapPiece(this.gameObject);
     }
 }
