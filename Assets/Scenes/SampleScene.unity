@@ -157,11 +157,8 @@ MonoBehaviour:
   jigsawPuzzle: {fileID: 11400000, guid: 8b78ff19dedb98d4b840b5afb6e0cd35, type: 2}
   pieceTag: 0
   distanceToSnap: 3
-  thirdCoordonateValue: 0
-  minX: 0
-  maxX: 30
-  minY: 2
-  maxY: 10
+  thirdCoordValue: 0
+  saveFile: {fileID: 11400000, guid: 25b2998f0f5fe0b4889092b096299cd6, type: 2}
   pieceName: JigsawPiece
 --- !u!114 &357707008
 MonoBehaviour:

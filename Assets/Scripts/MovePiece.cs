@@ -8,6 +8,8 @@ public class MovePiece : MonoBehaviour
     float zCoord;
     bool inPlace = false;
 
+    public bool GetIfInPlace() => inPlace;
+
     void OnMouseDown()
     {
         if(!inPlace)

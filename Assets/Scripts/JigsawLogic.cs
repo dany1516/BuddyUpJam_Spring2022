@@ -15,11 +15,8 @@ public class JigsawLogic : MonoBehaviour
     [SerializeField][Range(0,5)] float distanceToSnap;
     [SerializeField][Range(0,2)] int thirdCoordValue;
 
-    [Header("Coordonates to spawn pieces")]
-    [SerializeField] float minX;
-    [SerializeField] float maxX;
-    [SerializeField] float minY;
-    [SerializeField] float maxY;
+    [Header("Save Data file")]
+    [SerializeField] SaveDataSO saveFile;
 
     [Header("Editor Settings")]
     [SerializeField] string pieceName;
@@ -28,21 +25,14 @@ public class JigsawLogic : MonoBehaviour
 
     void Start()
     {
-        //To Be Refab change value with ones from save settings
         jigsawNewPiece = new List<GameObject>(0);
         CreatePieces();
-        ChangeValues();
-    }
-
-    void ChangeValues()
-    {
-        for(int i = 0; i < jigsawNewPiece.Count; i++) 
+        if(saveFile.CanLoad())
         {
-            jigsawNewPiece[i].tag = pieceTag.ToString();
-            jigsawNewPiece[i].transform.parent = this.gameObject.transform;
-            jigsawNewPiece[i].transform.position = this.gameObject.transform.position + 
-                 new Vector3(Random.Range(minX,maxX), Random.Range(minY,maxY), thirdCoordValue); 
-        }    
+            ChangeValues(true);
+            return;
+        }
+        ChangeValues(false);
     }
 
     void CreatePieces()
@@ -56,6 +46,25 @@ public class JigsawLogic : MonoBehaviour
             newPiece.AddComponent<BoxCollider2D>();
             newPiece.AddComponent<MovePiece>();
         } 
+    }
+    void ChangeValues(bool isLoadFile)
+    {
+        for(int i = 0; i < jigsawNewPiece.Count; i++) 
+        {
+            jigsawNewPiece[i].tag = pieceTag.ToString();
+            jigsawNewPiece[i].transform.parent = this.gameObject.transform;
+            if(isLoadFile)
+            {
+                jigsawNewPiece[i].transform.position = this.gameObject.transform.position + saveFile.LoadPieces()[i].position;
+            }
+            else
+            {
+                jigsawNewPiece[i].transform.position = this.gameObject.transform.position + 
+                new Vector3(Random.Range(jigsawPuzzle.GetMinX(), jigsawPuzzle.GetMaxX()),
+                    Random.Range(jigsawPuzzle.GetMinY(), jigsawPuzzle.GetMaxY()), thirdCoordValue); 
+            }
+            
+        }    
     }
 
     public bool SnapPiece(GameObject piece)
@@ -75,6 +84,9 @@ public class JigsawLogic : MonoBehaviour
 
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.E))
+        {
+            saveFile.SavePieces(jigsawNewPiece);
+        }
     }
 }
