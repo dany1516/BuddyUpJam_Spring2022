@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 770e0f9c4ae4fe247942836414ccfed1, type: 3}
   m_Name: TestPuzzle
   m_EditorClassIdentifier: 
-  puzzleRows: 8
-  puzzleColumns: 8
+  puzzleRows: 16
+  puzzleColumns: 4
   jigsawPieceSize: 2.7
   jigsawPieces:
   - {fileID: 8957324059118975939, guid: 879531fb262d6724a97ab4ca54373289, type: 3}

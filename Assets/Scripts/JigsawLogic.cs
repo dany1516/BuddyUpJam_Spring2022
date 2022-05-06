@@ -58,9 +58,9 @@ public class JigsawLogic : MonoBehaviour
         } 
     }
 
-    public void SnapPiece(GameObject piece)
+    public bool SnapPiece(GameObject piece)
     {
-        var posOnX = int.Parse(piece.name.Replace(pieceName, "")) % jigsawPuzzle.GetPuzzleColumns();
+        var posOnX = int.Parse(piece.name.Replace(pieceName, "")) % jigsawPuzzle.GetPuzzleRows();
         var posOnY = int.Parse(piece.name.Replace(pieceName, "")) / jigsawPuzzle.GetPuzzleRows();
         var correctPosition = new Vector3(posOnX * jigsawPuzzle.GetJigsawPiecesSize(), posOnY * jigsawPuzzle.GetJigsawPiecesSize() * -1, thirdCoordValue);
         var dist = Vector3.Distance(piece.transform.position, correctPosition);
@@ -68,7 +68,9 @@ public class JigsawLogic : MonoBehaviour
         if(dist < distanceToSnap)
         {
             piece.transform.position = correctPosition;
-        } 
+            return true;
+        }
+        return false;
     }
 
     void Update()
