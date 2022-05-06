@@ -12,6 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5adf1ac1b1a54a4892061ad925d8c5d, type: 3}
   m_Name: DefaultSaveFile
   m_EditorClassIdentifier: 
-  piecesTag: 0
   pieces: []
-  level: 0
+  level: 1

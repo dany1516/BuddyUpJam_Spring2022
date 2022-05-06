@@ -20,6 +20,8 @@ public class JigsawLogic : MonoBehaviour
 
     [Header("Editor Settings")]
     [SerializeField] string pieceName;
+    //To Be refabed
+    [SerializeField] int piecesLeft;
 
     List<GameObject> jigsawNewPiece;
 
@@ -27,6 +29,7 @@ public class JigsawLogic : MonoBehaviour
     {
         jigsawNewPiece = new List<GameObject>(0);
         CreatePieces();
+        piecesLeft = jigsawNewPiece.Count;
         if(saveFile.CanLoad())
         {
             ChangeValues(true);
@@ -74,9 +77,15 @@ public class JigsawLogic : MonoBehaviour
         var correctPosition = new Vector3(posOnX * jigsawPuzzle.GetJigsawPiecesSize(), posOnY * jigsawPuzzle.GetJigsawPiecesSize() * -1, thirdCoordValue);
         var dist = Vector3.Distance(piece.transform.position, correctPosition);
 
+        //To Be fixed bug when click on snap piece the counter acts
         if(dist < distanceToSnap)
         {
             piece.transform.position = correctPosition;
+            piecesLeft -= 1;
+            if(piecesLeft <= 0)
+            {
+                Debug.Log("Level complete");
+            }
             return true;
         }
         return false;
