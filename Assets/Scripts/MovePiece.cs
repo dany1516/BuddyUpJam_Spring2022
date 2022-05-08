@@ -9,7 +9,6 @@ public class MovePiece : MonoBehaviour
 
     void OnMouseDown()
     {
-
         zCoord = Camera.main.WorldToScreenPoint(gameObject.transform.position).z;
         mOffset = gameObject.transform.position - GetMouseAsWorldPoint();
     }
