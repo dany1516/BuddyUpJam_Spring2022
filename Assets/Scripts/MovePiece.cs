@@ -6,17 +6,11 @@ public class MovePiece : MonoBehaviour
 {
     Vector3 mOffset;
     float zCoord;
-    bool inPlace = false;
-
-    public bool GetIfInPlace() => inPlace;
 
     void OnMouseDown()
     {
-        if(!inPlace)
-        {
-            zCoord = Camera.main.WorldToScreenPoint(gameObject.transform.position).z;
-            mOffset = gameObject.transform.position - GetMouseAsWorldPoint();
-        }  
+        zCoord = Camera.main.WorldToScreenPoint(gameObject.transform.position).z;
+        mOffset = gameObject.transform.position - GetMouseAsWorldPoint();
     }
 
     private Vector3 GetMouseAsWorldPoint()
@@ -28,14 +22,11 @@ public class MovePiece : MonoBehaviour
 
     void OnMouseDrag()
     {
-        if(!inPlace)
-        {
-            transform.position = GetMouseAsWorldPoint() + mOffset;
-        } 
+        transform.position = GetMouseAsWorldPoint() + mOffset;
     }
 
     void OnMouseUp() 
     {
-        inPlace = FindObjectOfType<JigsawLogic>().SnapPiece(this.gameObject);
+        FindObjectOfType<JigsawLogic>().SnapPiece(this.gameObject);
     }
 }

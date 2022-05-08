@@ -80,7 +80,7 @@ MonoBehaviour:
   - {fileID: 3136529135177961442, guid: 879531fb262d6724a97ab4ca54373289, type: 3}
   - {fileID: 4390658753444126330, guid: 879531fb262d6724a97ab4ca54373289, type: 3}
   - {fileID: -7919431157854069623, guid: 879531fb262d6724a97ab4ca54373289, type: 3}
-  minX: 0
+  minX: 1
   maxX: 10
   minY: 2
   maxY: 20
