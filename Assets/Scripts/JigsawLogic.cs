@@ -12,7 +12,7 @@ public class JigsawLogic : MonoBehaviour
     [Header("Pieces Values")]
     [SerializeField] List<JigsawPuzzleSO> jigsawPuzzle;
     [SerializeField] Tags pieceTag;
-    [SerializeField] float colliderSize;
+    [SerializeField] Vector3 colliderSize;
     [SerializeField][Range(0,5)] float distanceToSnap;
     [SerializeField][Range(0,2)] int thirdCoordValue;
 
@@ -34,10 +34,10 @@ public class JigsawLogic : MonoBehaviour
         level = saveFile.GetCurrentLevel();
         if(saveFile.CanLoad())
         {
-            ChangeValues(true);
+            ChangePosition(true);
             return;
         }
-        ChangeValues(false);
+        ChangePosition(false);
     }
 
     void CreatePieces()
@@ -48,11 +48,11 @@ public class JigsawLogic : MonoBehaviour
 
             jigsawNewPieces.Add(newPiece);
             newPiece.AddComponent<SpriteRenderer>().sprite = jigsawPuzzle[level].GetJigsawPieces()[i];
-            newPiece.AddComponent<BoxCollider2D>().size = new Vector2(colliderSize, colliderSize);
+            newPiece.AddComponent<BoxCollider>().size = colliderSize;
             newPiece.AddComponent<MovePiece>();
         } 
     }
-    void ChangeValues(bool isLoadFile)
+    void ChangePosition(bool isLoadFile)
     {
         for(int i = 0; i < jigsawNewPieces.Count; i++) 
         {
@@ -65,24 +65,27 @@ public class JigsawLogic : MonoBehaviour
             else
             {
                 jigsawNewPieces[i].transform.position = this.gameObject.transform.position + 
-                new Vector3(Random.Range(jigsawPuzzle[level].GetMinX(), jigsawPuzzle[level].GetMaxX()),
-                    Random.Range(jigsawPuzzle[level].GetMinY(), jigsawPuzzle[level].GetMaxY()), thirdCoordValue); 
-            }
-            
+                new Vector3(
+                    Random.Range(jigsawPuzzle[level].GetMinVector().x, jigsawPuzzle[level].GetMaxVector().x),
+                    Random.Range(jigsawPuzzle[level].GetMinVector().y, jigsawPuzzle[level].GetMaxVector().y),
+                    Random.Range(jigsawPuzzle[level].GetMinVector().z, jigsawPuzzle[level].GetMaxVector().z));
+                jigsawNewPieces[i].transform.rotation = this.gameObject.transform.rotation;
+            }  
         }    
     }
 
+    //To be refabed
     public bool SnapPiece(GameObject piece)
     {
         var posOnX = int.Parse(piece.name.Replace(pieceName, "")) % jigsawPuzzle[level].GetPuzzleColumns();
         var posOnY = int.Parse(piece.name.Replace(pieceName, "")) / jigsawPuzzle[level].GetPuzzleColumns();
         var correctPosition = new Vector3(posOnX * jigsawPuzzle[level].GetJigsawPiecesWidth(), posOnY * jigsawPuzzle[level].GetJigsawPiecesHeight() * -1, thirdCoordValue);
-        var dist = Vector3.Distance(piece.transform.position, correctPosition);
+        var dist = Vector3.Distance(piece.transform.position, this.transform.position + correctPosition);
 
         if(dist < distanceToSnap)
         {
             piece.transform.position = correctPosition;
-            Destroy(piece.GetComponent<BoxCollider2D>());
+            Destroy(piece.GetComponent<BoxCollider>());
             piecesLeft -= 1;
             if(piecesLeft <= 0)
             {

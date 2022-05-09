@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   puzzleColumns: 12
   puzzleRows: 11
-  jigsawPieceWidth: 1.17
-  jigsawPieceHeight: 1.25
+  jigsawPieceWidth: 0.0585
+  jigsawPieceHeight: 0.0625
   jigsawPieces:
   - {fileID: -6554404843041739504, guid: 90633bc6bfc3a194596a4abdaf385569, type: 3}
   - {fileID: 8403668480133977966, guid: 90633bc6bfc3a194596a4abdaf385569, type: 3}
@@ -149,9 +149,5 @@ MonoBehaviour:
   - {fileID: 5835228407568291500, guid: 90633bc6bfc3a194596a4abdaf385569, type: 3}
   - {fileID: 72497272816264194, guid: 90633bc6bfc3a194596a4abdaf385569, type: 3}
   - {fileID: -8060169723982488830, guid: 90633bc6bfc3a194596a4abdaf385569, type: 3}
-  minX: -5
-  maxX: 15
-  minY: 1
-  maxY: 15
-  minZ: 0
-  maxZ: 0
+  min: {x: -0.5, y: 0, z: -0.1}
+  max: {x: 0.5, y: 0, z: -1}
