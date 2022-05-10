@@ -10,12 +10,14 @@ public class JigsawPuzzleSO : ScriptableObject
     [SerializeField] int puzzleRows;
     [SerializeField] float jigsawPieceWidth;
     [SerializeField] float jigsawPieceHeight;
+    [SerializeField] Vector3 adjustmentVector;
     [SerializeField] List<Sprite> jigsawPieces;
 
     public int GetPuzzleColumns() => puzzleColumns;
     public int GetPuzzleRows() => puzzleRows;
     public float GetJigsawPiecesWidth() => jigsawPieceWidth;
     public float GetJigsawPiecesHeight() => jigsawPieceHeight;
+    public Vector3 GetJigsawAdjustment() => adjustmentVector;
     public List<Sprite> GetJigsawPieces() => jigsawPieces;
     
     [Header("Spawn pieces area")]

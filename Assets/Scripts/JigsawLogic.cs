@@ -12,9 +12,8 @@ public class JigsawLogic : MonoBehaviour
     [Header("Pieces Values")]
     [SerializeField] List<JigsawPuzzleSO> jigsawPuzzle;
     [SerializeField] Tags pieceTag;
-    [SerializeField] Vector3 colliderSize;
     [SerializeField][Range(0,5)] float distanceToSnap;
-    [SerializeField][Range(0,2)] int thirdCoordValue;
+    [SerializeField] Vector3 adjustmentVector;
 
     [Header("Save Data file")]
     [SerializeField] SaveDataSO saveFile;
@@ -24,14 +23,15 @@ public class JigsawLogic : MonoBehaviour
     [SerializeField] int piecesLeft;
 
     List<GameObject> jigsawNewPieces;
-    int level;
+    
+    int section;
 
     void Start()
     {
         jigsawNewPieces = new List<GameObject>(0);
+        section = saveFile.GetCurrentLevel();
         CreatePieces();
         piecesLeft = jigsawNewPieces.Count;
-        level = saveFile.GetCurrentLevel();
         if(saveFile.CanLoad())
         {
             ChangePosition(true);
@@ -42,13 +42,13 @@ public class JigsawLogic : MonoBehaviour
 
     void CreatePieces()
     {
-        for(int i = 0; i < jigsawPuzzle[level].GetJigsawPieces().Count; i++)
+        for(int i = 0; i < jigsawPuzzle[section].GetJigsawPieces().Count; i++)
         {
             var newPiece = new GameObject(pieceName + (i));
 
             jigsawNewPieces.Add(newPiece);
-            newPiece.AddComponent<SpriteRenderer>().sprite = jigsawPuzzle[level].GetJigsawPieces()[i];
-            newPiece.AddComponent<BoxCollider>().size = colliderSize;
+            newPiece.AddComponent<SpriteRenderer>().sprite = jigsawPuzzle[section].GetJigsawPieces()[i];
+            newPiece.AddComponent<BoxCollider>().size = new Vector3(jigsawPuzzle[section].GetJigsawPiecesWidth(), jigsawPuzzle[section].GetJigsawPiecesWidth(), 0.01f);
             newPiece.AddComponent<MovePiece>();
         } 
     }
@@ -64,22 +64,23 @@ public class JigsawLogic : MonoBehaviour
             }
             else
             {
-                jigsawNewPieces[i].transform.position = this.gameObject.transform.position + 
-                new Vector3(
-                    Random.Range(jigsawPuzzle[level].GetMinVector().x, jigsawPuzzle[level].GetMaxVector().x),
-                    Random.Range(jigsawPuzzle[level].GetMinVector().y, jigsawPuzzle[level].GetMaxVector().y),
-                    Random.Range(jigsawPuzzle[level].GetMinVector().z, jigsawPuzzle[level].GetMaxVector().z));
+                jigsawNewPieces[i].transform.position = this.gameObject.transform.position + new Vector3(
+                    Random.Range(jigsawPuzzle[section].GetMinVector().x, jigsawPuzzle[section].GetMaxVector().x),
+                    Random.Range(jigsawPuzzle[section].GetMinVector().y, jigsawPuzzle[section].GetMaxVector().y),
+                    Random.Range(jigsawPuzzle[section].GetMinVector().z, jigsawPuzzle[section].GetMaxVector().z));
                 jigsawNewPieces[i].transform.rotation = this.gameObject.transform.rotation;
             }  
         }    
     }
 
-    //To be refabed
     public bool SnapPiece(GameObject piece)
     {
-        var posOnX = int.Parse(piece.name.Replace(pieceName, "")) % jigsawPuzzle[level].GetPuzzleColumns();
-        var posOnY = int.Parse(piece.name.Replace(pieceName, "")) / jigsawPuzzle[level].GetPuzzleColumns();
-        var correctPosition = new Vector3(posOnX * jigsawPuzzle[level].GetJigsawPiecesWidth(), posOnY * jigsawPuzzle[level].GetJigsawPiecesHeight() * -1, thirdCoordValue);
+        var posOnZ = int.Parse(piece.name.Replace(pieceName, "")) % jigsawPuzzle[section].GetPuzzleColumns();
+        var posOnX = int.Parse(piece.name.Replace(pieceName, "")) / jigsawPuzzle[section].GetPuzzleColumns();
+        var correctPosition = new Vector3(
+                                        posOnX * jigsawPuzzle[section].GetJigsawPiecesHeight() + jigsawPuzzle[section].GetJigsawAdjustment().x, 
+                                        jigsawPuzzle[section].GetJigsawAdjustment().y, 
+                                        posOnZ * jigsawPuzzle[section].GetJigsawPiecesWidth() + jigsawPuzzle[section].GetJigsawAdjustment().z);
         var dist = Vector3.Distance(piece.transform.position, this.transform.position + correctPosition);
 
         if(dist < distanceToSnap)
@@ -90,7 +91,7 @@ public class JigsawLogic : MonoBehaviour
             if(piecesLeft <= 0)
             {
                 DestroyPieces();
-                saveFile.NextLevel();
+                saveFile.NewSection();
             }
             return true;
         }
