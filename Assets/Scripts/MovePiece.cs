@@ -5,12 +5,19 @@ using UnityEngine;
 public class MovePiece : MonoBehaviour
 {
     Vector3 mOffset;
+    AudioHandler audioHandler;
     float zCoord;
+
+    void Start() 
+    {
+        audioHandler = FindObjectOfType<AudioHandler>();
+    }
 
     void OnMouseDown()
     {
         zCoord = Camera.main.WorldToScreenPoint(gameObject.transform.position).z;
         mOffset = gameObject.transform.position - GetMouseAsWorldPoint();
+        audioHandler.PlayPickUpSFX();
     }
 
     private Vector3 GetMouseAsWorldPoint()
@@ -27,6 +34,12 @@ public class MovePiece : MonoBehaviour
 
     void OnMouseUp() 
     {
-        FindObjectOfType<JigsawLogic>().SnapPiece(this.gameObject);
+        var isConnected = FindObjectOfType<JigsawLogic>().SnapPiece(this.gameObject);
+        if(isConnected)
+        {
+            audioHandler.PlayConnectSFX();
+            return;
+        }
+        audioHandler.PlayPutDownSFX();
     }
 }

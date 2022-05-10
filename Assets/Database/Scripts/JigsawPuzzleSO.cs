@@ -10,28 +10,22 @@ public class JigsawPuzzleSO : ScriptableObject
     [SerializeField] int puzzleRows;
     [SerializeField] float jigsawPieceWidth;
     [SerializeField] float jigsawPieceHeight;
+    [SerializeField] Vector3 adjustmentVector;
     [SerializeField] List<Sprite> jigsawPieces;
 
     public int GetPuzzleColumns() => puzzleColumns;
     public int GetPuzzleRows() => puzzleRows;
     public float GetJigsawPiecesWidth() => jigsawPieceWidth;
     public float GetJigsawPiecesHeight() => jigsawPieceHeight;
+    public Vector3 GetJigsawAdjustment() => adjustmentVector;
     public List<Sprite> GetJigsawPieces() => jigsawPieces;
     
     [Header("Spawn pieces area")]
-    [SerializeField] float minX;
-    [SerializeField] float maxX;
-    [SerializeField] float minY;
-    [SerializeField] float maxY;
-    [SerializeField] float minZ;
-    [SerializeField] float maxZ;
+    [SerializeField] Vector3 min;
+    [SerializeField] Vector3 max;
 
-    public float GetMinX() => minX;
-    public float GetMaxX() => maxX;
-    public float GetMinY() => minY;
-    public float GetMaxY() => maxY;
-    public float GetMinZ() => minZ;
-    public float GetMaxZ() => maxZ;
+    public Vector3 GetMinVector() => min;
+    public Vector3 GetMaxVector() => max;
 }
 
 [System.Serializable]

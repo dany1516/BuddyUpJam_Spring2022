@@ -6,10 +6,10 @@ using UnityEngine;
 public class SaveDataSO : ScriptableObject 
 {
     [SerializeField] List<PuzzlePieceData> pieces;
-    [SerializeField] int level;
+    [SerializeField] int section;
 
     public List<PuzzlePieceData> LoadPieces() => pieces;
-    public int GetCurrentLevel() => level;
+    public int GetCurrentLevel() => section - 1;
 
     public bool CanLoad()
     {
@@ -32,11 +32,15 @@ public class SaveDataSO : ScriptableObject
         }
     }
 
-    public int NextLevel()
+    public int NewSection()
     {
-        level++;
         ResetPieces();
-        return level;
+        return section - 1;
+    }
+
+    public void SetSection(int section)
+    {
+        this.section = section + 1;
     }
 
     void ResetPieces()
