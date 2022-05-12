@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75fb466623b407240b9573ed82e5c58b, type: 3}
+  m_Name: 11 500CorrectPieces
+  m_EditorClassIdentifier: 
+  conversationInput:
+  - dialogueLine: Yes!!! Halfway there!
+    convParticipant: 1
+    OtherFunctions:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueLine: "What\u2019s the rush? Aren\u2019t you having fun?"
+    convParticipant: 0
+    OtherFunctions:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueLine: "\u2026yes."
+    convParticipant: 1
+    OtherFunctions:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueLine: But I still want to win!
+    convParticipant: 1
+    OtherFunctions:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueLine: Haha, not if I do first! Watch this!
+    convParticipant: 0
+    OtherFunctions:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueLine: Blam!
+    convParticipant: 0
+    OtherFunctions:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueLine: "That\u2019s the-"
+    convParticipant: 1
+    OtherFunctions:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueLine: "I\u2019m aware that\u2019s the wrong piece!"
+    convParticipant: 0
+    OtherFunctions:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueLine: I was testing you.
+    convParticipant: 0
+    OtherFunctions:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueLine: With a test.
+    convParticipant: 0
+    OtherFunctions:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueLine: You passed it.
+    convParticipant: 0
+    OtherFunctions:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueLine: The test.
+    convParticipant: 0
+    OtherFunctions:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueLine: "\u2026"
+    convParticipant: 1
+    OtherFunctions:
+      m_PersistentCalls:
+        m_Calls: []
+  isTriggerAtSection: 0
+  section: 0
+  isTriggerAtPieces: 0
+  numberOfPieces: 500
+  isOther: 0
+  isRepeatable: 0
+  hasBeenPlayed: 0

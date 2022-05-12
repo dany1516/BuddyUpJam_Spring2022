@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75fb466623b407240b9573ed82e5c58b, type: 3}
+  m_Name: 23 Section3
+  m_EditorClassIdentifier: 
+  conversationInput:
+  - dialogueLine: "It\u2019s day and night in the puzzle, that\u2019s weird."
+    convParticipant: 1
+    OtherFunctions:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueLine: Is it?
+    convParticipant: 0
+    OtherFunctions:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueLine: "Yeah, it\u2019s not supposed to be day and night\u2026"
+    convParticipant: 1
+    OtherFunctions:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueLine: (Did I forget to teach my kid about evenings?) Well why not?
+    convParticipant: 0
+    OtherFunctions:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueLine: "Hmm\u2026 Because day\u2019s day and night\u2019s night."
+    convParticipant: 1
+    OtherFunctions:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1435709805681218190, guid: 2429828d8dd864e469c552fb8ecdc70e, type: 3}
+          m_TargetAssemblyTypeName: AudioHandler, Assembly-CSharp
+          m_MethodName: PlayGirlHmm
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - dialogueLine: "(I\u2019m the worst father in the universe)"
+    convParticipant: 0
+    OtherFunctions:
+      m_PersistentCalls:
+        m_Calls: []
+  isTriggerAtSection: 1
+  section: 3
+  isTriggerAtPieces: 0
+  numberOfPieces: 0
+  isOther: 0
+  isRepeatable: 0
+  hasBeenPlayed: 0

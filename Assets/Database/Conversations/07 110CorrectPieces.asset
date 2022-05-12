@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75fb466623b407240b9573ed82e5c58b, type: 3}
+  m_Name: 07 110CorrectPieces
+  m_EditorClassIdentifier: 
+  conversationInput:
+  - dialogueLine: "Hmm\u2026 can I have one of those cheese sticks? I need thinking
+      food."
+    convParticipant: 0
+    OtherFunctions:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1435709805681218190, guid: 2429828d8dd864e469c552fb8ecdc70e, type: 3}
+          m_TargetAssemblyTypeName: AudioHandler, Assembly-CSharp
+          m_MethodName: PlayDadHmm
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - dialogueLine: All gone.
+    convParticipant: 1
+    OtherFunctions:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueLine: "What!? That\u2019s just cruel\u2026"
+    convParticipant: 0
+    OtherFunctions:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueLine: "Hehehe\u2026solve quicker next time."
+    convParticipant: 1
+    OtherFunctions:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueLine: "You\u2019re a monster. (Gah. I\u2019m so proud of her.)"
+    convParticipant: 0
+    OtherFunctions:
+      m_PersistentCalls:
+        m_Calls: []
+  isTriggerAtSection: 0
+  section: 0
+  isTriggerAtPieces: 0
+  numberOfPieces: 110
+  isOther: 0
+  isRepeatable: 0
+  hasBeenPlayed: 0

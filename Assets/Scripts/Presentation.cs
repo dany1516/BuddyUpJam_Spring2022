@@ -6,29 +6,45 @@ public class Presentation : MonoBehaviour
 {
     [SerializeField] List<PresentationSystem> pointToMove;
 
-    bool canMoveCamera;
-    // Start is called before the first frame update
-    void Start()
+    Vector3 startPosition;
+    Quaternion startRotation;
+
+    public void CameraToUse(int cameraIndex)
     {
-        canMoveCamera = true;
+        for(int i = 0; i < pointToMove.Count; i++) 
+        {
+            if(i == cameraIndex)
+            {
+                pointToMove[i].canMoveCamera = true;
+            }
+            else
+            {
+                pointToMove[i].canMoveCamera = false;
+            }
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Q))
+        for(int i = 0; i < pointToMove.Count; i++) 
         {
-            canMoveCamera = true;
-        }
-        if(canMoveCamera)
+            MoveCameraAt(i);
+        }   
+    }
+
+    private void MoveCameraAt(int i)
+    {
+        if (pointToMove[i].canMoveCamera)
         {
-            var step = 5 * Time.deltaTime;
-            var step2 = 180 * Time.deltaTime;
-            transform.position = Vector3.MoveTowards(transform.position, pointToMove[0].pointPrefab.transform.position, step);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, pointToMove[0].pointPrefab.transform.rotation, step2);
-            if(Vector3.Distance(transform.position, pointToMove[0].pointPrefab.transform.position) < 0.001)
+            float t = 0;
+            startPosition = transform.position;
+            startRotation = transform.rotation;
+            t += Time.deltaTime / pointToMove[i].etaTime;
+            transform.position = Vector3.Lerp(startPosition, pointToMove[i].pointPrefab.transform.position, t);
+            transform.rotation = Quaternion.Lerp(startRotation, pointToMove[i].pointPrefab.transform.rotation, t);
+            if(pointToMove[i].pointPrefab.transform.position == transform.position)
             {
-                
+                pointToMove[i].canMoveCamera = false;
             }
         }
     }
@@ -38,5 +54,6 @@ public class Presentation : MonoBehaviour
     {
         public GameObject pointPrefab;
         public float etaTime;
+        public bool canMoveCamera = false;
     }
 }

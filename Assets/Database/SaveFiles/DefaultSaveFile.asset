@@ -13,4 +13,7 @@ MonoBehaviour:
   m_Name: DefaultSaveFile
   m_EditorClassIdentifier: 
   pieces: []
-  section: 3
+  section: 4
+  isCompleted: 01010100000000000101
+  totalPieces: 416
+  currentPieces: 0

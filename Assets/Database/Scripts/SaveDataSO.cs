@@ -7,9 +7,16 @@ public class SaveDataSO : ScriptableObject
 {
     [SerializeField] List<PuzzlePieceData> pieces;
     [SerializeField] int section;
+    [SerializeField] List<bool> isCompleted;
+    [SerializeField] int totalPieces;
+    [SerializeField] int currentPieces;
+
 
     public List<PuzzlePieceData> LoadPieces() => pieces;
-    public int GetCurrentLevel() => section - 1;
+    public int GetCurrentSection() => section - 1;
+    public void SetCurrentSection(int section) { this.section = section;}
+    public int GetTotalPieces() => totalPieces;
+    public int GetCurrentPieces() => currentPieces;
 
     public bool CanLoad()
     {
@@ -20,7 +27,7 @@ public class SaveDataSO : ScriptableObject
         return false;
     }
 
-    public void SavePieces(List<GameObject> piecesToSave)
+    public void SavePieces(List<GameObject> piecesToSave, int currentPieces, int section)
     {
         ResetPieces();
         pieces = new List<PuzzlePieceData>(piecesToSave.Count);
@@ -28,14 +35,21 @@ public class SaveDataSO : ScriptableObject
         {
             var newElement = new PuzzlePieceData();
             newElement.position = piecesToSave[i].transform.position;
+            newElement.rotation = piecesToSave[i].transform.rotation;
             pieces.Add(newElement);
         }
+        this.currentPieces = currentPieces;
+        this.section = section;
     }
 
-    public int NewSection()
+    public void SectionCompleted(int numberOfPieces)
     {
-        ResetPieces();
-        return section - 1;
+        if(!isCompleted[section-1])
+        {
+            totalPieces += numberOfPieces;
+            isCompleted[section - 1] = true;
+            ResetPieces();
+        }
     }
 
     public void SetSection(int section)
@@ -46,11 +60,13 @@ public class SaveDataSO : ScriptableObject
     void ResetPieces()
     {
         pieces = new List<PuzzlePieceData>();
+        currentPieces = 0;
     }
 
     [System.Serializable]
     public class PuzzlePieceData
     {
         public Vector3 position;
+        public Quaternion rotation;
     }
 }

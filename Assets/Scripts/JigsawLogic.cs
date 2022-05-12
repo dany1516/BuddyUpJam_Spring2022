@@ -13,27 +13,27 @@ public class JigsawLogic : MonoBehaviour
     [SerializeField] List<JigsawPuzzleSO> jigsawPuzzle;
     [SerializeField] Tags pieceTag;
     [SerializeField][Range(0,5)] float distanceToSnap;
-    [SerializeField] Vector3 adjustmentVector;
 
     [Header("Save Data file")]
     [SerializeField] SaveDataSO saveFile;
 
     [Header("Editor Settings")]
     [SerializeField] string pieceName;
-    [SerializeField] int piecesLeft;
+    [SerializeField] int piecesCompleted;
 
     List<GameObject> jigsawNewPieces;
     
     int section;
 
-    void Start()
+    public void StartPuzzle(int section)
     {
         jigsawNewPieces = new List<GameObject>(0);
-        section = saveFile.GetCurrentLevel();
+        this.section = section - 1;
         CreatePieces();
-        piecesLeft = jigsawNewPieces.Count;
+        piecesCompleted = 0;
         if(saveFile.CanLoad())
         {
+            section = saveFile.GetCurrentSection();
             ChangePosition(true);
             return;
         }
@@ -60,7 +60,9 @@ public class JigsawLogic : MonoBehaviour
             jigsawNewPieces[i].transform.parent = this.gameObject.transform;
             if(isLoadFile)
             {
-                jigsawNewPieces[i].transform.position = this.gameObject.transform.position + saveFile.LoadPieces()[i].position;
+                jigsawNewPieces[i].transform.position = saveFile.LoadPieces()[i].position;
+                jigsawNewPieces[i].transform.rotation = saveFile.LoadPieces()[i].rotation;
+                piecesCompleted = saveFile.GetCurrentPieces();
             }
             else
             {
@@ -77,28 +79,32 @@ public class JigsawLogic : MonoBehaviour
     {
         var posOnZ = int.Parse(piece.name.Replace(pieceName, "")) % jigsawPuzzle[section].GetPuzzleColumns();
         var posOnX = int.Parse(piece.name.Replace(pieceName, "")) / jigsawPuzzle[section].GetPuzzleColumns();
+        Debug.Log("Position on X is: " + posOnX);
+        Debug.Log("Position on Z is: " + posOnZ);
         var correctPosition = new Vector3(
                                         posOnX * jigsawPuzzle[section].GetJigsawPiecesHeight() + jigsawPuzzle[section].GetJigsawAdjustment().x, 
                                         jigsawPuzzle[section].GetJigsawAdjustment().y, 
                                         posOnZ * jigsawPuzzle[section].GetJigsawPiecesWidth() + jigsawPuzzle[section].GetJigsawAdjustment().z);
-        var dist = Vector3.Distance(piece.transform.position, this.transform.position + correctPosition);
+        Debug.Log("Correct position is: " + correctPosition);
+        var dist = Vector3.Distance(piece.transform.position, correctPosition);
+        Debug.Log("Distance is broken in: piece position -> " + piece.transform.position + " ,this game object position -> " + this.transform.position + " ,and correct position -> " + correctPosition);
 
         if(dist < distanceToSnap)
         {
             piece.transform.position = correctPosition;
+            Debug.Log("Correct position is: " + correctPosition);
             Destroy(piece.GetComponent<BoxCollider>());
-            piecesLeft -= 1;
-            if(piecesLeft <= 0)
+            piecesCompleted += 1;
+            if(piecesCompleted == jigsawNewPieces.Count)
             {
-                DestroyPieces();
-                saveFile.NewSection();
+                saveFile.SectionCompleted(piecesCompleted);
             }
             return true;
         }
         return false;
     }
 
-    void DestroyPieces()
+    public void DestroyPieces()
     {
         foreach(GameObject piece in jigsawNewPieces)
         {
@@ -111,7 +117,7 @@ public class JigsawLogic : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.E))
         {
-            saveFile.SavePieces(jigsawNewPieces);
+            saveFile.SavePieces(jigsawNewPieces, piecesCompleted, section);
         }
         if(Input.GetKeyDown(KeyCode.D))
         {

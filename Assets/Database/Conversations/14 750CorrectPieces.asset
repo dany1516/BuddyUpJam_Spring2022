@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75fb466623b407240b9573ed82e5c58b, type: 3}
+  m_Name: 14 750CorrectPieces
+  m_EditorClassIdentifier: 
+  conversationInput:
+  - dialogueLine: "Nearly there! I bet you weren\u2019t half as good as me when you
+      were little."
+    convParticipant: 1
+    OtherFunctions:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueLine: "Oh, I was never little. I\u2019ve always looked like this. Medical
+      mystery, it was."
+    convParticipant: 0
+    OtherFunctions:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1435709805681218190, guid: 2429828d8dd864e469c552fb8ecdc70e, type: 3}
+          m_TargetAssemblyTypeName: AudioHandler, Assembly-CSharp
+          m_MethodName: PlayDadOh
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - dialogueLine: "Dad. You already did that one this week. I KNOW that\u2019s not
+      true."
+    convParticipant: 1
+    OtherFunctions:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueLine: "Oh, alrighty then wiseguy. Think you\u2019re something special,
+      eh?"
+    convParticipant: 0
+    OtherFunctions:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueLine: I know I am.
+    convParticipant: 1
+    OtherFunctions:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueLine: "And don\u2019t you forget it! But when I was little\u2026 I don\u2019t
+      think so, honestly."
+    convParticipant: 0
+    OtherFunctions:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueLine: "You\u2019d have to ask your nans to be sure, but the three of
+      us tended to build more forts than puzzles. Did a fine job of it too."
+    convParticipant: 0
+    OtherFunctions:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueLine: "So you haven\u2019t practiced a lot or anything?"
+    convParticipant: 1
+    OtherFunctions:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueLine: "Nope. Why, are you worried I\u2019m just naturally this good?"
+    convParticipant: 0
+    OtherFunctions:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueLine: "\u2026"
+    convParticipant: 1
+    OtherFunctions:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueLine: "\u2026That\u2019s the wrong piece again, isn\u2019t it."
+    convParticipant: 0
+    OtherFunctions:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueLine: "\u2026"
+    convParticipant: 1
+    OtherFunctions:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueLine: "\u2026"
+    convParticipant: 0
+    OtherFunctions:
+      m_PersistentCalls:
+        m_Calls: []
+  isTriggerAtSection: 0
+  section: 0
+  isTriggerAtPieces: 0
+  numberOfPieces: 750
+  isOther: 0
+  isRepeatable: 0
+  hasBeenPlayed: 0

@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75fb466623b407240b9573ed82e5c58b, type: 3}
+  m_Name: 16 830CorrectPieces
+  m_EditorClassIdentifier: 
+  conversationInput:
+  - dialogueLine: How would you save a puzzle?
+    convParticipant: 1
+    OtherFunctions:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueLine: "I suppose you could just leave it out on a table we don\u2019t
+      want to use. Like that horrid puce one from your aunt."
+    convParticipant: 0
+    OtherFunctions:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueLine: You said you liked it!
+    convParticipant: 1
+    OtherFunctions:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueLine: Only because she was in the room. It could make a fine display
+      stand though. We could show it off to anyone who visits us!
+    convParticipant: 0
+    OtherFunctions:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueLine: "What if you don\u2019t want it to come apart?"
+    convParticipant: 1
+    OtherFunctions:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueLine: "I suppose you could glue it to something. We\u2019ve got a roll
+      of contact paper around somewhere."
+    convParticipant: 0
+    OtherFunctions:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueLine: But puzzles are meant to come apart again, sweetie. So you can
+      enjoy them, time and again.
+    convParticipant: 0
+    OtherFunctions:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueLine: But could you mail it to someone you wanted to show it too, if
+      you do that? With the contract paper?
+    convParticipant: 1
+    OtherFunctions:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueLine: "I\u2019d expect so. Yes. If that\u2019s what you want, we can
+      talk about it."
+    convParticipant: 0
+    OtherFunctions:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueLine: Mm.
+    convParticipant: 1
+    OtherFunctions:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1435709805681218190, guid: 2429828d8dd864e469c552fb8ecdc70e, type: 3}
+          m_TargetAssemblyTypeName: AudioHandler, Assembly-CSharp
+          m_MethodName: PlayGirlHmm
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  isTriggerAtSection: 0
+  section: 0
+  isTriggerAtPieces: 0
+  numberOfPieces: 830
+  isOther: 0
+  isRepeatable: 0
+  hasBeenPlayed: 0
