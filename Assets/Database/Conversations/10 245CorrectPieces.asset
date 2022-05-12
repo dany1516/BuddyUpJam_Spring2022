@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75fb466623b407240b9573ed82e5c58b, type: 3}
+  m_Name: 10 245CorrectPieces
+  m_EditorClassIdentifier: 
+  conversationInput:
+  - dialogueLine: "\u2026After we\u2019re done, do you think you could find that
+      picture?"
+    convParticipant: 1
+    OtherFunctions:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueLine: Of course.
+    convParticipant: 0
+    OtherFunctions:
+      m_PersistentCalls:
+        m_Calls: []
+  isTriggerAtSection: 0
+  section: 0
+  isTriggerAtPieces: 0
+  numberOfPieces: 245
+  isOther: 0
+  isRepeatable: 0
+  hasBeenPlayed: 0

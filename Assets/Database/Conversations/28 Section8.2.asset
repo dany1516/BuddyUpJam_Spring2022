@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75fb466623b407240b9573ed82e5c58b, type: 3}
+  m_Name: 28 Section8.2
+  m_EditorClassIdentifier: 
+  conversationInput:
+  - dialogueLine: "That bug\u2019s going to work."
+    convParticipant: 1
+    OtherFunctions:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueLine: You reckon sweetie?
+    convParticipant: 0
+    OtherFunctions:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueLine: "Yeah he\u2019s got a hat"
+    convParticipant: 1
+    OtherFunctions:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueLine: And people with hats go to work?
+    convParticipant: 0
+    OtherFunctions:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueLine: "Exactly! Like the people who wait for the bus. I wonder what he\u2019s
+      waiting for."
+    convParticipant: 1
+    OtherFunctions:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueLine: "I don\u2019t know\u2026"
+    convParticipant: 0
+    OtherFunctions:
+      m_PersistentCalls:
+        m_Calls: []
+  isTriggerAtSection: 1
+  section: 8
+  isTriggerAtPieces: 0
+  numberOfPieces: 0
+  isOther: 0
+  isRepeatable: 0
+  hasBeenPlayed: 0
