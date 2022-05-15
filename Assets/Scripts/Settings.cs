@@ -34,13 +34,13 @@ public class Settings : MonoBehaviour
     public void AdjustMusicVolume(float volume)
     {
         settingsData.SetMusicVolume(volume);
-        musicVolumeText.text = Mathf.RoundToInt(volume * 1000) + "%";
+        musicVolumeText.text = Mathf.RoundToInt(volume * 100) + "%";
     }
 
     public void AdjustSFXVolume(float volume)
     {
         settingsData.SetSFXVolume(volume);
-        sFXVolumeText.text = Mathf.RoundToInt(volume * 1000) + "%";
+        sFXVolumeText.text = Mathf.RoundToInt(volume * 100) + "%";
     }
 
     public void AdjustScreenMode(bool screen)

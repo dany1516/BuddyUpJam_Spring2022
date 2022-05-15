@@ -3,8 +3,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Settings", menuName = "Create New Settings File", order = 3)]
 public class SettingsDataSO : ScriptableObject 
 {
-    [SerializeField] [Range(0,.1f)] float musicVolume;
-    [SerializeField] [Range(0,.1f)] float sFXVolume;
+    [SerializeField] [Range(0, 1f)] float musicVolume;
+    [SerializeField] [Range(0, 1f)] float sFXVolume;
     [SerializeField] bool isFullScreen;
     [SerializeField] bool isEasyMode;
 
