@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d192bef0340172f40924a77b5400f773, type: 3}
   m_Name: SettingsSaveData
   m_EditorClassIdentifier: 
-  musicVolume: 0.05
-  sFXVolume: 0.05
+  musicVolume: 0.5
+  sFXVolume: 0.5
   isFullScreen: 1
   isEasyMode: 1
