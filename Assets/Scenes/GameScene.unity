@@ -1986,7 +1986,7 @@ MonoBehaviour:
   girlSprites:
   - {fileID: 4391612109351293552, guid: 97e0a188044973a439b1e1427a9ced1b, type: 3}
   - {fileID: 7009685054887835792, guid: 97e0a188044973a439b1e1427a9ced1b, type: 3}
-  secondsToSkip: 1
+  secondsToSkip: 1.2
   sectionRelated:
   - {fileID: 11400000, guid: f272dc14fcf1dd04893347bbdc33f186, type: 2}
   - {fileID: 11400000, guid: 4ffcb15abaad3324f86218fccc13bb4d, type: 2}
@@ -2336,7 +2336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9148dc9758f0f341b06ecc77e026595, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  light: {fileID: 1300164657}
+  fireLight: {fileID: 1300164657}
   time: 0.01
   minIntensity: 1
   maxIntensity: 2

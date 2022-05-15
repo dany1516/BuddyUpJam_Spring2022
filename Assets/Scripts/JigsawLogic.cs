@@ -84,6 +84,7 @@ public class JigsawLogic : MonoBehaviour
             newPiece.AddComponent<SpriteRenderer>().sprite = jigsawPuzzle[section].GetJigsawPieces()[i];
             newPiece.AddComponent<BoxCollider>().size = new Vector3(jigsawPuzzle[section].GetJigsawPiecesWidth(), jigsawPuzzle[section].GetJigsawPiecesWidth(), 0.01f);
             newPiece.AddComponent<MovePiece>();
+            newPiece.GetComponent<SpriteRenderer>().sortingOrder = 5;
         } 
     }
 
@@ -136,6 +137,7 @@ public class JigsawLogic : MonoBehaviour
         conversation.gameObject.SetActive(true);
         conversation.CheckIfPieces(saveData.GetTotalPieces() + piecesCompleted);
         saveData.SavePieces(jigsawNewPieces, piecesCompleted, section);
+        piece.GetComponent<SpriteRenderer>().sortingOrder = 1;
 
         if (piecesCompleted == jigsawNewPieces.Count)
         {
