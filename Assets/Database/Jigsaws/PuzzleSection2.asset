@@ -122,5 +122,8 @@ MonoBehaviour:
   - {fileID: -5717226757820887008, guid: d68c5c9ae9492eb41b20b335ab27f557, type: 3}
   - {fileID: -8504657368163587023, guid: d68c5c9ae9492eb41b20b335ab27f557, type: 3}
   - {fileID: -2463745297869476385, guid: d68c5c9ae9492eb41b20b335ab27f557, type: 3}
+  jigsawMat:
+  - {fileID: 737015840076166721, guid: a0054c357bd285441b7b49df3c5da68d, type: 3}
+  - {fileID: 7298432171847982957, guid: c21ebe0080c19ca43bfae4f5aa81360c, type: 3}
   min: {x: -0.6, y: 0, z: -0.3}
   max: {x: 0.4, y: 0, z: -1}

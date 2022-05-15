@@ -58,5 +58,8 @@ MonoBehaviour:
   - {fileID: -9209642932828875808, guid: eccc407f907c2bd449553900685e9904, type: 3}
   - {fileID: -3847054279784007630, guid: eccc407f907c2bd449553900685e9904, type: 3}
   - {fileID: 1837864059777596327, guid: eccc407f907c2bd449553900685e9904, type: 3}
+  jigsawMat:
+  - {fileID: 8218272843880362524, guid: 9c677ea3a0a74f54ebc320a061458ffa, type: 3}
+  - {fileID: 3399840028041153912, guid: 296a7db9d90ff7c40b2ef66767bcfde1, type: 3}
   min: {x: -0.6, y: 0, z: 0}
   max: {x: 0.4, y: 0, z: -1}

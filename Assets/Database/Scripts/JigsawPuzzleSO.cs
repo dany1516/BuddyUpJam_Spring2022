@@ -13,17 +13,21 @@ public class JigsawPuzzleSO : ScriptableObject
     [SerializeField] Vector3 adjustmentVector;
     [SerializeField] List<Sprite> jigsawPieces;
 
+    [Header("Jigsaw Mat")]
+    [SerializeField] List<GameObject> jigsawMat;
+
+    [Header("Spawn pieces area")]
+    [SerializeField] Vector3 min;
+    [SerializeField] Vector3 max;
+
     public int GetPuzzleColumns() => puzzleColumns;
     public int GetPuzzleRows() => puzzleRows;
     public float GetJigsawPiecesWidth() => jigsawPieceWidth;
     public float GetJigsawPiecesHeight() => jigsawPieceHeight;
     public Vector3 GetJigsawAdjustment() => adjustmentVector;
     public List<Sprite> GetJigsawPieces() => jigsawPieces;
+    public List<GameObject> GetJigsawMat() => jigsawMat;
     
-    [Header("Spawn pieces area")]
-    [SerializeField] Vector3 min;
-    [SerializeField] Vector3 max;
-
     public Vector3 GetMinVector() => min;
     public Vector3 GetMaxVector() => max;
 }

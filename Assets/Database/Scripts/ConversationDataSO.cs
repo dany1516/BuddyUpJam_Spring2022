@@ -7,15 +7,12 @@ using UnityEngine.Events;
 public class ConversationDataSO : ScriptableObject 
 {
     [SerializeField] List<ConversationInput> conversationInput;
-    [SerializeField] bool isTriggerAtSection = false;
     [SerializeField] int section = 0;
-    [SerializeField] bool isTriggerAtPieces = false;
     [SerializeField] int numberOfPieces = 0;
-    [SerializeField] bool isOther;
-    [SerializeField] bool isRepeatable;
-    [SerializeField] bool hasBeenPlayed = false;
 
-    
+    public List<ConversationInput> GetConversationInput() => conversationInput;
+    public int GetSection() => section;
+    public int GetNumberOfPieces() => numberOfPieces;
 }
 
 [System.Serializable]
