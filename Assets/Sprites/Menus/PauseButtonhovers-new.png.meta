@@ -1,0 +1,588 @@
+fileFormatVersion: 2
+guid: 7d2f4e2a0baff05498f6e359e4a09f60
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5371735217050762849
+    second: PauseButtonhovers-new_0
+  - first:
+      213: 6646143146829900881
+    second: PauseButtonhovers-new_1
+  - first:
+      213: 5028717994570763239
+    second: PauseButtonhovers-new_2
+  - first:
+      213: -3071737120548216590
+    second: PauseButtonhovers-new_3
+  - first:
+      213: 4799314860344150186
+    second: PauseButtonhovers-new_4
+  - first:
+      213: -1632297509830864897
+    second: PauseButtonhovers-new_5
+  - first:
+      213: 4528614365969981534
+    second: PauseButtonhovers-new_6
+  - first:
+      213: -5822663088205165952
+    second: PauseButtonhovers-new_7
+  - first:
+      213: 8985424602680197386
+    second: PauseButtonhovers-new_8
+  - first:
+      213: -5553735520868599437
+    second: PauseButtonhovers-new_9
+  - first:
+      213: -3721242135014013749
+    second: PauseButtonhovers-new_10
+  - first:
+      213: 3882466751672821777
+    second: PauseButtonhovers-new_11
+  - first:
+      213: -598758182731375250
+    second: PauseButtonhovers-new_12
+  - first:
+      213: 6764361159866986352
+    second: PauseButtonhovers-new_13
+  - first:
+      213: 2307566355618646901
+    second: PauseButtonhovers-new_14
+  - first:
+      213: -1997105664215303180
+    second: PauseButtonhovers-new_15
+  - first:
+      213: -7778001452757637793
+    second: PauseButtonhovers-new_16
+  - first:
+      213: -268226455226115047
+    second: PauseButtonhovers-new_17
+  - first:
+      213: -8782445327559516907
+    second: PauseButtonhovers-new_18
+  - first:
+      213: 6889848508133596332
+    second: PauseButtonhovers-new_24
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PauseButtonhovers-new_0
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 2214
+        width: 414
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f91cb30e743c375b0800000000000000
+      internalID: -5371735217050762849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PauseButtonhovers-new_1
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 2202
+        width: 300
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15c6131baf7db3c50800000000000000
+      internalID: 6646143146829900881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PauseButtonhovers-new_2
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 2202
+        width: 300
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eb410e6f5899c540800000000000000
+      internalID: 5028717994570763239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PauseButtonhovers-new_3
+      rect:
+        serializedVersion: 2
+        x: 2229
+        y: 2157
+        width: 440
+        height: 276
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f0a7561d5ffe55d0800000000000000
+      internalID: -3071737120548216590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PauseButtonhovers-new_4
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 1679
+        width: 527
+        height: 222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa8011800779a9240800000000000000
+      internalID: 4799314860344150186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PauseButtonhovers-new_5
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 1665
+        width: 435
+        height: 242
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fffc6c6201ae859e0800000000000000
+      internalID: -1632297509830864897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PauseButtonhovers-new_6
+      rect:
+        serializedVersion: 2
+        x: 1562
+        y: 1670
+        width: 378
+        height: 231
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e502f50b5ced8de30800000000000000
+      internalID: 4528614365969981534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PauseButtonhovers-new_7
+      rect:
+        serializedVersion: 2
+        x: 2174
+        y: 1645
+        width: 555
+        height: 292
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08a80c465ceb13fa0800000000000000
+      internalID: -5822663088205165952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PauseButtonhovers-new_8
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 1159
+        width: 501
+        height: 232
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a010fceb114a2bc70800000000000000
+      internalID: 8985424602680197386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PauseButtonhovers-new_9
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 1106
+        width: 397
+        height: 337
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 379782ef7fa2de2b0800000000000000
+      internalID: -5553735520868599437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PauseButtonhovers-new_10
+      rect:
+        serializedVersion: 2
+        x: 1487
+        y: 1067
+        width: 527
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc406438efd7b5cc0800000000000000
+      internalID: -3721242135014013749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PauseButtonhovers-new_11
+      rect:
+        serializedVersion: 2
+        x: 2187
+        y: 1086
+        width: 524
+        height: 385
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11829b1c0fa41e530800000000000000
+      internalID: 3882466751672821777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PauseButtonhovers-new_12
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 584
+        width: 397
+        height: 360
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6d10fbea98c0b7f0800000000000000
+      internalID: -598758182731375250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PauseButtonhovers-new_13
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 666
+        width: 299
+        height: 197
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07f2252c2a6dfdd50800000000000000
+      internalID: 6764361159866986352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PauseButtonhovers-new_14
+      rect:
+        serializedVersion: 2
+        x: 1678
+        y: 703
+        width: 144
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57bca4adf5f160020800000000000000
+      internalID: 2307566355618646901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PauseButtonhovers-new_15
+      rect:
+        serializedVersion: 2
+        x: 2379
+        y: 703
+        width: 143
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fbb681cafad844e0800000000000000
+      internalID: -1997105664215303180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PauseButtonhovers-new_16
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 174
+        width: 414
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f55a8e963ecfe0490800000000000000
+      internalID: -7778001452757637793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PauseButtonhovers-new_17
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 112
+        width: 476
+        height: 266
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91c92e8c571174cf0800000000000000
+      internalID: -268226455226115047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PauseButtonhovers-new_18
+      rect:
+        serializedVersion: 2
+        x: 1576
+        y: 190
+        width: 350
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51d9687818c7e1680800000000000000
+      internalID: -8782445327559516907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PauseButtonhovers-new_24
+      rect:
+        serializedVersion: 2
+        x: 1993
+        y: 115
+        width: 372
+        height: 243
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cacde83d6b8ad9f50800000000000000
+      internalID: 6889848508133596332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

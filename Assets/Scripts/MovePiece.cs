@@ -5,12 +5,12 @@ using UnityEngine;
 public class MovePiece : MonoBehaviour
 {
     Vector3 mOffset;
-    AudioHandler audioHandler;
+    SFXHandler audioHandler;
     float zCoord;
 
     void Start() 
     {
-        audioHandler = FindObjectOfType<AudioHandler>();
+        audioHandler = FindObjectOfType<SFXHandler>();
     }
 
     void OnMouseDown()

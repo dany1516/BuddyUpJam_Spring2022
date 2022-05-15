@@ -39,7 +39,7 @@ public class SaveDataSO : ScriptableObject
             pieces.Add(newElement);
         }
         this.currentPieces = currentPieces;
-        this.section = section;
+        SetSection(section);
     }
 
     public void SectionCompleted(int numberOfPieces)

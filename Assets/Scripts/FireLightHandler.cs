@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FireLightHandler : MonoBehaviour
 {
-    [SerializeField] Light light;
+    [SerializeField] Light fireLight;
     [SerializeField] float time;
     [SerializeField] float minIntensity;
     [SerializeField] float maxIntensity;
@@ -14,22 +14,22 @@ public class FireLightHandler : MonoBehaviour
 
     void Start()
     {
-        newIntensity = light.intensity;
+        newIntensity = fireLight.intensity;
         StartCoroutine("ChangeIntensity");
     }
 
     IEnumerator ChangeIntensity()
     {
         yield return new WaitForSeconds(time);
-        if((int)(newIntensity * 100) == (int)(light.intensity * 100))
+        if((int)(newIntensity * 100) == (int)(fireLight.intensity * 100))
         {
             newIntensity = Random.Range(minIntensity, maxIntensity);
             StartCoroutine("ChangeIntensity");
         }
         else
         {
-            if(newIntensity < light.intensity){ light.intensity -= valueToChange;}
-            else{ light.intensity += valueToChange;} 
+            if(newIntensity < fireLight.intensity){ fireLight.intensity -= valueToChange;}
+            else{ fireLight.intensity += valueToChange;} 
             StartCoroutine("ChangeIntensity");
         }
     }
